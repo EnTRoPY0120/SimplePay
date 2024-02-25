@@ -32,9 +32,16 @@ mongoose.connect("${Your_Own_URL}");
 
 Or if you docker installed go to the root folder and run the following commands :
 ```bash
-docker build -t mongodb-image .
+docker build -t mongodb .
 
-docker run -d -p 27017:27017 --name mongodb mongodb-image --replSet rs
+docker run -d -p 27017:27017 --name mongodb-container mongodb --replSet rs
+```
+
+Now use the localhost DB connection string : 
+```js
+const { default: mongoose,  } = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/SimpleDB");
 ```
 
 
