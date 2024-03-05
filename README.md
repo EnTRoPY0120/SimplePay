@@ -54,5 +54,5 @@ npm run dev
 
 Open the link the vite provides you and navigate to the signup page
 ```
- http://localhost:5173/${route}
+ http://localhost:5173/signup
 ```
